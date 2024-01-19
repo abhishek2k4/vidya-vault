@@ -1,0 +1,321 @@
+/* ----COLOR PALLATE---- */
+:root {
+    --primary-color: #00ACCA;
+    --secondary-color: #fff;
+}
+/* -----FONT FAMILY----- */
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* ----COMMON BUTTON CLASS----- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.2s ease-out;
+}
+.btn:hover::before {
+    transform: scaleX(1);
+}
+/* ------button end----- */
+
+/* -----SCROLL BAR----- */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); /* Scrollbar thumb color */
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Scrollbar track color */
+  }
+/* ----scroll bar ends---- */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+/* ----N A V B A R _ S T U F F ----   */
+.navbar {
+    display: block;
+    height: 50px;
+    margin-inline: auto;
+    padding-inline: 50px;
+    padding-left: 95px;
+    /* border: 2px solid red; */
+    /* background-color: var(--primary-color); */
+    background: linear-gradient(90deg,  #00ACCA 0%, #58c9dd 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* -----LOGO----- */
+.logo {
+    display: flex;
+    padding-inline: 10px;
+}
+.logo img {
+    height: 35px;
+}
+.logo a {
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    align-self: center;
+}
+/* -----LOGO END----- */
+.menu ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+.menu ul li {
+    margin-inline: 20px;
+}
+.menu ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1px; /* Line height */
+    background-color: var(--secondary-color); /* Line color */
+    transform: scaleX(0) translateY(3px); /* Initial line width */
+    transform-origin: 50% 100%;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1) translateY(3px); /* Expand line width on hover */
+  }
+/* -----NAVBAR ENDS----- */
+
+/* ---- H E R O _ S E C T I O N ---- */
+.hero-section {
+    background-color: var(--secondary-color);
+    background-image: url("images/bg-texture3.png");
+    background-repeat: repeat;
+    background-size: auto;
+    filter: brightness(95%);
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 100px;
+    padding-top: 50px;
+    height: 30rem;
+    /* max-width: 1200px; */
+    /* border: 2px solid red; */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.headings {
+    /* border: 2px solid red; */
+    height: 27rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.headings h1 {
+    font-size: 45px;
+    line-height: 60px;
+    margin-bottom: 25px;
+}
+.headings p {
+    font-size: 15px;
+    line-height: 35px;
+    margin-bottom: 35px;
+}
+.vector-img {
+    height: 25rem;
+}
+/* -----hero section ends (Home Page)----- */
+
+/* ----hero section *[ for register.php ]---- */
+.register-hero{
+    height: calc(100vh - 100px);
+    align-items: flex-start;
+}
+.reg-form {
+    /* border: 2px solid red; */
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 5px solid var(--primary-color);
+    border-radius: 30px;
+}
+.reg-form h2{
+    margin: 20px auto;
+} 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+  }
+.form-group input{
+    width: 20rem;
+    margin-top: 3px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    outline: none;
+    padding-inline: 10px;
+}
+.form-group:first-child input{
+    text-transform:capitalize;
+}
+.form-group textarea{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    outline: none;
+}
+.submit-btn{
+    margin-bottom: 20px;
+}
+.vector{
+    height: calc(100vh - 100px);
+}
+.vector-img-reg{
+    height: 80%;
+    /* border: 2px solid red; */
+}
+/* -----hero section ends (Register Page)----- */
+
+
+/* ------book category section----- */
+.category{
+    height: 300px;
+    /* border: 2px solid red; */
+    /* background-color: var(--primary-color); */
+    background: linear-gradient(90deg,  #00ACCA 0%, #58c9dd 100%);
+}
+.cat-heading{
+    z-index: 99;
+    transform: translateY(-30px);
+    user-select: none;
+}
+.category h2{
+    background-color: var(--secondary-color);
+    width: 220px;
+    height: 35px;
+    padding-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.cards-section{
+    display: flex;
+    justify-content: space-around;
+    padding-inline: 100px;
+    padding-top: 35px;
+}
+.card{    
+    /* border: 2px solid red; */
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--primary-color);
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+.card:nth-child(even):hover{
+    transform: translateY(-30px) rotate(3deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+.card:nth-child(odd):hover{
+    transform: translateY(-30px) rotate(-3deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+.card img{
+    border-radius: 10px;
+    height: 120px;
+    transform: translate(-5px, -5px);
+}
+/* -----book category ends----- */
+footer{
+    /* border: 2px solid red; */
+    background-color: var(--primary-color);
+    height: 280px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline: 50px;
+}
+footer h3{
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: underline;
+}
+.footer-column{
+    margin: 40px 0px 10px 0px ;
+    width: 240px;
+    display: block;
+    color: var(--secondary-color);
+    /* border: 2px solid red; */
+}
+.footer-column p {
+    margin-top: 10px;
+}
+.footer-column li{
+    margin: 10px 0px 10px 20px;
+    
+}
+.contact-info ul *{
+    margin: 10px 0px 10px 0px;
+    list-style: none;
+    color: var(--secondary-color);
+}
+/* -----bottom bar (github line)----- */
+.bottom-bar{
+    height: 30px;
+    padding: 15px;
+    background-color: #424a53;
+    color: var(--secondary-color);
+}
+.bottom-bar a{
+    color: var(--secondary-color);
+}
+
